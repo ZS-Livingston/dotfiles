@@ -69,18 +69,21 @@ set mouse+=a
 " bad habit. The former is enforceable through a .vimrc, while we don't know
 " how to prevent the latter.
 " Do this in normal mode...
-" nnoremap <Left>  :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up>    :echoe "Use k"<CR>
-" nnoremap <Down>  :echoe "Use j"<CR>
+ nnoremap <Left>  :echoe "Použij h"<CR>
+ nnoremap <Right> :echoe "Použij l"<CR>
+ nnoremap <Up>    :echoe "Použij k"<CR>
+ nnoremap <Down>  :echoe "Použij j"<CR>
 " ...and in insert mode
-" inoremap <Left>  <ESC>:echoe "Use h"<CR>
-" inoremap <Right> <ESC>:echoe "Use l"<CR>
-" inoremap <Up>    <ESC>:echoe "Use k"<CR>
-" inoremap <Down>  <ESC>:echoe "Use j"<CR>
+ inoremap <Left>  <ESC>:echoe "Použij h"<CR>
+ inoremap <Right> <ESC>:echoe "Použij l"<CR>
+ inoremap <Up>    <ESC>:echoe "Použij k"<CR>
+ inoremap <Down>  <ESC>:echoe "Použij j"<CR>
 
 " Set list to display characters
-set list listchars=tab:»-,trail:•
+" This helps identifying indentation errors in python.
+set list listchars=tab:»-
+"""""""""""""""""""""""""",trail:• does not work for coder workspaces setup,
+""""""""""""""""""""""""""so I am commenting it out.
 
 " Set whitespace instead of tab and shiftwidth
 set autoindent
