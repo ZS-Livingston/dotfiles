@@ -1,13 +1,9 @@
 #!/bin/bash
 
 # Determine the directory where this script is located
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR=$(pwd)
 
-# Define the home directory
-HOME_DIR="$HOME"
-
-# Copy the .vimrc file from the repository to the home directory
-cp "$REPO_DIR/.vimrc" "$HOME_DIR"
+# Copy the .vimrc file from the repository to the current user's home directory
+cp "${REPO_DIR}/.vimrc" "${REPO_DIR}/.."
 
 echo "Dotfiles have been installed."
-
