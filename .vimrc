@@ -79,11 +79,12 @@ set mouse+=a
  inoremap <Up>    <ESC>:echoe "Použij k"<CR>
  inoremap <Down>  <ESC>:echoe "Použij j"<CR>
 
+" Set default encoding to utf
+set encoding=utf-8
+
 " Set list to display characters
 " This helps identifying indentation errors in python.
-set list listchars=tab:»-
-"""""""""""""""""""""""""",trail:• does not work for coder workspaces setup,
-""""""""""""""""""""""""""so I am commenting it out.
+set list listchars=tab:»-, trail:•
 
 " Set whitespace instead of tab and shiftwidth
 set autoindent
